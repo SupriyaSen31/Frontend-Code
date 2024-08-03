@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        .container {
+            background-color: chocolate;
+            height: 445px;
+            transition-duration: 1s;
+            transition-timing-function: steps(5);
+        }
+
+       /* div:hover {
+            background-color: black;
+        }*/
+
+        .box {
+            border: 3px solid black;
+            display: inline-block;
+            /* transform-origin: 0; */
+            /* transform: translate(134px, 56px) rotateX(45deg); */
+            /* transform: scale(5, 6); */
+            /* transform: scaleX(8); */
+            /* transform: scaleY(5); */
+            /* transform: skew(15deg, 15deg); */
+            /* transform: skewY(10deg); */
+        }
+
+        img {
+            width: 146px;
+            height: 455px;
+            /* transition-property: width;
+            transition-duration: 1s;
+            transition-timing-function: ease-in;
+            transition-delay: 2s; */
+            transition: width 1s ease-in-out, height 3s ease-in;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="box">
+            <img id="myImage"
+                src="https://images.unsplash.com/photo-1523519432192-5d143133cca3?dpr=1&h=204&w=204&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxjb2xsZWN0aW9uLXRodW1ibmFpbHx8MTk2MTI5MHx8ZW58MHx8fHx8">
+            <button id="btn">Toggle</button>
+        </div>
+    </div>
+</body>
+<script>
+    myImage.style.width = '146px';
+    myImage.style.height = '16px';
+
+    btn.addEventListener("click", () => {
+        myImage.style.height = '456px';
+        if (myImage.style.width === '546px') {
+            myImage.style.width = "146px";
+        }
+        else if (myImage.style.width === '146px') {
+            myImage.style.width = "546px";
+        }
+    })
+</script>
+
+</html>

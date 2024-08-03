@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set 4</title>
+    <style>
+        .progress {
+            background-color: red;
+            width: 60px;
+            height: 3px;
+            animation: load 1s ease-in-out 1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 125px;
+            background-color: black;
+        }
+
+        main {
+            height: 900px;
+            background-color: rgb(21, 21, 90);
+        }
+
+        @keyframes load {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 60vw;
+            }
+
+            100% {
+                width: 100vw;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes slide1 {
+            0% {
+                transform: translate(-35vw);
+            }
+
+            100% {
+                transform: translate(35vw);
+            }
+        }
+
+        @keyframes slide2 {
+            0% {
+                transform: translate(0vw);
+            }
+
+            100% {
+                transform: translate(135vw);
+            }
+        }
+
+        img{
+            display: block;
+            margin: auto;
+        }
+
+        .slider{
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+            height: 520px;
+            overflow: hidden;
+            margin: auto;
+        }
+        .img1{
+            transform: translate(-35vw);
+            animation: slide1 1s 2s forwards;
+        }
+
+        .img2{
+            transform: translate(0vw);
+            animation: slide2 1s 2s forwards;
+        }
+
+        .img3{
+            transform: translate(35vw);
+        }
+    </style>
+</head>
+<body>
+    <div class="progress"></div>
+    <header></header>
+    <main>
+        <!-- <img src="dragon.png" alt="" width="125px"> -->
+        <div class="slider">
+            <img class="img1" src="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=520&500=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <img class="img2" src="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=520&500=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+            <img class="img3" src="https://images.unsplash.com/photo-1568615944078-821ced977caa?q=80&w=520&500=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+    </main>
+</body>
+<script></script>
+</html>

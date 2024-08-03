@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Practice Set 3</title>
+    <style>
+        .progress {
+            background-color: red;
+            width: 60px;
+            height: 3px;
+            animation: load 1s ease-in-out 1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            height: 125px;
+            background-color: black;
+        }
+
+        main {
+            height: 900px;
+            background-color: rgb(131, 131, 223);
+        }
+
+        @keyframes load {
+            0% {
+                width: 0;
+            }
+
+            50% {
+                width: 60vw;
+            }
+
+            100% {
+                width: 100vw;
+            }
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        img{
+            animation: rotate 1s ease-in infinite;
+        }
+    </style>
+</head>
+<body>
+    <div class="progress"></div>
+    <header></header>
+    <main>
+        <img src="dragon.png" alt="" width="125px">
+    </main>
+</body>
+</html>
